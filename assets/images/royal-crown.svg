@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff6b8"/>
+      <stop offset="35%" stop-color="#ffd700"/>
+      <stop offset="70%" stop-color="#f59f00"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="50%" stop-color="#fffbeb"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <radialGradient id="rubyGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ff7b92"/>
+      <stop offset="40%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </radialGradient>
+    <radialGradient id="sapphireGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#93c5fd"/>
+      <stop offset="40%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </radialGradient>
+    <radialGradient id="emeraldGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#a7f3d0"/>
+      <stop offset="40%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </radialGradient>
+    <linearGradient id="velvet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="50%" stop-color="#7f1d1d"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </linearGradient>
+    <filter id="royalGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Golden Shimmer Background -->
+  <ellipse cx="200" cy="180" rx="170" ry="100" fill="#ffd700" opacity="0.12" filter="url(#royalGlow)"/>
+
+  <!-- Velvet Interior Dome of Crown -->
+  <path d="M 90 230 C 80 160 120 110 200 100 C 280 110 320 160 310 230 Z" 
+        fill="url(#velvet)" stroke="#550c18" stroke-width="2"/>
+  <!-- Velvet sheen creases -->
+  <path d="M 150 140 Q 200 120 250 140" stroke="#f43f5e" stroke-width="3" opacity="0.25" fill="none"/>
+  <path d="M 170 115 Q 200 105 230 115" stroke="#f43f5e" stroke-width="2" opacity="0.3" fill="none"/>
+
+  <!-- Golden Filigree Spikes and Peaks -->
+  <!-- Outer Left Peak -->
+  <path d="M 85 240 L 70 140 L 115 190 Z" fill="url(#goldGradient)" stroke="#8d4b00" stroke-width="3"/>
+  <circle cx="70" cy="136" r="9" fill="#ffffff" stroke="#8d4b00" stroke-width="2.5"/>
+  <circle cx="68" cy="133" r="3" fill="#fff"/>
+
+  <!-- Mid Left Peak -->
+  <path d="M 115 240 L 130 95 L 165 185 Z" fill="url(#goldGradient)" stroke="#8d4b00" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="130" cy="90" r="11" fill="url(#sapphireGlow)" stroke="#8d4b00" stroke-width="2.5"/>
+  <circle cx="127" cy="87" r="3.5" fill="#fff"/>
+
+  <!-- Outer Right Peak -->
+  <path d="M 315 240 L 330 140 L 285 190 Z" fill="url(#goldGradient)" stroke="#8d4b00" stroke-width="3"/>
+  <circle cx="330" cy="136" r="9" fill="#ffffff" stroke="#8d4b00" stroke-width="2.5"/>
+  <circle cx="328" cy="133" r="3" fill="#fff"/>
+
+  <!-- Mid Right Peak -->
+  <path d="M 285 240 L 270 95 L 235 185 Z" fill="url(#goldGradient)" stroke="#8d4b00" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="270" cy="90" r="11" fill="url(#sapphireGlow)" stroke="#8d4b00" stroke-width="2.5"/>
+  <circle cx="267" cy="87" r="3.5" fill="#fff"/>
+
+  <!-- Majestic Grand Center Peak -->
+  <path d="M 155 240 L 200 50 L 245 240 Z" fill="url(#goldGradient)" stroke="#8d4b00" stroke-width="4" stroke-linejoin="round"/>
+  
+  <!-- Crown Tip Pearl and Cross Finial -->
+  <g transform="translate(200, 42)">
+    <circle cx="0" cy="0" r="13" fill="#ffffff" stroke="#8d4b00" stroke-width="2.5"/>
+    <circle cx="-3" cy="-3" r="4" fill="#fff"/>
+    <!-- Sparkling diamond cross on top -->
+    <path d="M 0 -22 L 0 -13 M -5 -18 L 5 -18" stroke="#ffd700" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="0" cy="-18" r="2.5" fill="#fff"/>
+  </g>
+
+  <!-- Crown Base Filigree Band -->
+  <path d="M 75 235 Q 200 255 325 235 L 325 265 Q 200 285 75 265 Z" 
+        fill="url(#goldRim)" stroke="#8d4b00" stroke-width="3.5"/>
+  
+  <!-- Lower Ermine Fur Trim / Pearls -->
+  <path d="M 75 265 Q 200 285 325 265 L 325 272 Q 200 292 75 272 Z"
+        fill="#fdf2f8" stroke="#8d4b00" stroke-width="2"/>
+  <!-- Ermine tails / small accents -->
+  <g fill="#2e1065">
+    <ellipse cx="100" cy="272" rx="3.5" ry="2"/>
+    <ellipse cx="140" cy="276" rx="3.5" ry="2"/>
+    <ellipse cx="180" cy="279" rx="3.5" ry="2"/>
+    <ellipse cx="220" cy="279" rx="3.5" ry="2"/>
+    <ellipse cx="260" cy="276" rx="3.5" ry="2"/>
+    <ellipse cx="300" cy="272" rx="3.5" ry="2"/>
+  </g>
+
+  <!-- Jewels on the Crown Band -->
+  <g>
+    <!-- Center Grand Heart Ruby -->
+    <g transform="translate(200, 252)">
+      <path d="M 0 -10 C -9 -18 -20 -8 -16 5 C -13 14 0 22 0 22 C 0 22 13 14 16 5 C 20 -8 9 -18 0 -10 Z" 
+            fill="url(#rubyGlow)" stroke="#ffd700" stroke-width="2.5" filter="url(#royalGlow)"/>
+      <ellipse cx="-5" cy="-3" rx="3" ry="5" fill="#fff" opacity="0.7" transform="rotate(-30 -5 -3)"/>
+    </g>
+
+    <!-- Emerald on Left -->
+    <ellipse cx="140" cy="249" rx="8" ry="11" fill="url(#emeraldGlow)" stroke="#ffd700" stroke-width="2"/>
+    <circle cx="138" cy="246" r="3" fill="#fff" opacity="0.8"/>
+
+    <!-- Sapphire on Right -->
+    <ellipse cx="260" cy="249" rx="8" ry="11" fill="url(#sapphireGlow)" stroke="#ffd700" stroke-width="2"/>
+    <circle cx="258" cy="246" r="3" fill="#fff" opacity="0.8"/>
+
+    <!-- Pearls alternating on band -->
+    <circle cx="105" cy="246" r="6" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+    <circle cx="170" cy="252" r="5" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+    <circle cx="230" cy="252" r="5" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+    <circle cx="295" cy="246" r="6" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+  </g>
+
+  <!-- Diamond Sparkle Glints around Crown -->
+  <g fill="#ffffff">
+    <path d="M 70 100 Q 75 110 85 110 Q 75 110 70 120 Q 65 110 55 110 Q 65 110 70 100 Z" opacity="0.9"/>
+    <path d="M 330 85 Q 335 95 345 95 Q 335 95 330 105 Q 325 95 315 95 Q 325 95 330 85 Z" opacity="0.9"/>
+    <path d="M 200 15 Q 204 25 214 25 Q 204 25 200 35 Q 196 25 186 25 Q 196 25 200 15 Z" opacity="0.95"/>
+  </g>
+</svg>

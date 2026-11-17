@@ -1,0 +1,745 @@
+/* ==========================================================================
+   PRINCESS DAY - PAGE-SPECIFIC STYLES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   PAGE 1: IT'S PRINCESS DAY (Night Garden & Opening Experience)
+   -------------------------------------------------------------------------- */
+#page-1 {
+  background: radial-gradient(circle at 50% 20%, #3b1154 0%, #200832 60%, #11031b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.garden-night-sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.lantern-left {
+  position: absolute;
+  top: -20px;
+  left: 4%;
+  width: 90px;
+  max-width: 22vw;
+  z-index: 12;
+  filter: drop-shadow(0 0 25px rgba(254, 240, 138, 0.7));
+}
+
+.lantern-right {
+  position: absolute;
+  top: -10px;
+  right: 4%;
+  width: 100px;
+  max-width: 24vw;
+  z-index: 12;
+  filter: drop-shadow(0 0 25px rgba(254, 240, 138, 0.7));
+}
+
+.garden-moon {
+  width: 130px;
+  max-width: 30vw;
+  margin-bottom: -15px;
+  z-index: 11;
+}
+
+.page1-header-tag {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+  opacity: 0.9;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.page1-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 7vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(244, 114, 182, 0.8), 0 0 40px rgba(126, 34, 206, 0.6);
+  margin-bottom: 4px;
+}
+
+.page1-princess-name {
+  font-family: var(--font-cursive);
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  color: #fbcfe8;
+  margin-bottom: 10px;
+  text-shadow: 0 0 18px rgba(244, 63, 94, 0.7);
+}
+
+.page1-subtitle {
+  font-size: 0.98rem;
+  color: #fbcfe8;
+  margin-bottom: 28px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.enter-main-btn {
+  padding: 16px 40px;
+  font-size: 1.15rem;
+  box-shadow: 0 0 40px rgba(244, 63, 94, 0.8), 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+.card-action-wrap {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.card-next-btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  width: auto;
+}
+
+.btn-arrow {
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.card-next-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 2: HAPPY PRINCESS DAY (Hello Kitty Pastel Pink Theme)
+   -------------------------------------------------------------------------- */
+#page-2 {
+  background: radial-gradient(circle at 50% 30%, #ffd6e8 0%, #fbcfe8 50%, #f5d0fe 100%);
+  color: var(--text-dark);
+}
+
+.page2-card {
+  background: var(--card-bg);
+  border: 2px solid #f472b6;
+  border-radius: 28px;
+  padding: 30px 24px;
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(244, 114, 182, 0.3);
+  width: 100%;
+}
+
+.hk-illustration-wrap {
+  width: 160px;
+  max-width: 45vw;
+  margin: 0 auto 12px auto;
+  filter: drop-shadow(0 8px 18px rgba(236, 72, 153, 0.25));
+}
+
+.page2-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 5.5vw, 2.6rem);
+  color: #be185d;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.page2-sweetheart-tag {
+  font-family: var(--font-cursive);
+  font-size: 1.8rem;
+  color: #db2777;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.page2-body-text {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #4a1d6d;
+  margin-bottom: 22px;
+  max-width: 480px;
+}
+
+.page2-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fce7f3;
+  color: #be185d;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #fbcfe8;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 3: GIFTS FOR MY PRINCESS (Greeting Card & Unwrapping Boxes)
+   -------------------------------------------------------------------------- */
+#page-3 {
+  background: radial-gradient(circle at 50% 30%, #fae8ff 0%, #f5d0fe 60%, #e9d5ff 100%);
+  color: var(--text-dark);
+}
+
+.page3-card {
+  background: var(--card-bg);
+  border: 2px solid #c084fc;
+  border-radius: 28px;
+  padding: 28px 20px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+}
+
+.page3-header-art {
+  width: 130px;
+  max-width: 36vw;
+  margin: 0 auto 10px auto;
+}
+
+.page3-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  color: #6b21a8;
+  margin-bottom: 6px;
+}
+
+.page3-subtitle {
+  font-size: 0.88rem;
+  color: #86198f;
+  margin-bottom: 22px;
+  font-style: italic;
+}
+
+.gifts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 480px) {
+  .gifts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.gift-interactive-card {
+  background: #ffffff;
+  border: 1.5px solid #e9d5ff;
+  border-radius: 18px;
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.gift-interactive-card:hover {
+  transform: translateY(-4px);
+  border-color: #c084fc;
+  box-shadow: 0 8px 20px rgba(192, 132, 252, 0.3);
+}
+
+.gift-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.gift-card-title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b21a8;
+  margin-bottom: 4px;
+}
+
+.gift-card-desc {
+  font-size: 0.8rem;
+  color: #4b5563;
+  line-height: 1.45;
+}
+
+.gift-card-tap-cue {
+  display: block;
+  font-size: 0.68rem;
+  color: #ec4899;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.gift-interactive-card.unwrapped {
+  background: linear-gradient(135deg, #fdf4ff, #fae8ff);
+  border-color: #f43f5e;
+}
+
+.gift-interactive-card.unwrapped .gift-card-tap-cue {
+  color: #10b981;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 4: THE MISSING CROWN (Regal Crown & Interactive Experience)
+   -------------------------------------------------------------------------- */
+#page-4 {
+  background: radial-gradient(circle at 50% 25%, #2e083a 0%, #1a0826 60%, #0d0214 100%);
+  color: var(--text-light);
+}
+
+.page4-card {
+  background: var(--card-night);
+  border: 2px solid var(--gold-primary);
+  border-radius: 28px;
+  padding: 30px 22px;
+  box-shadow: var(--shadow-gold), var(--shadow-lg);
+  width: 100%;
+}
+
+.page4-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 5.5vw, 2.5rem);
+  color: var(--gold-light);
+  margin-bottom: 6px;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.page4-subtitle {
+  font-size: 0.92rem;
+  color: #e9d5ff;
+  margin-bottom: 22px;
+}
+
+.crown-stage-wrapper {
+  position: relative;
+  width: 200px;
+  height: 160px;
+  margin: 0 auto 12px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.movable-crown {
+  width: 140px;
+  z-index: 5;
+}
+
+.princess-silhouette-mirror {
+  position: absolute;
+  bottom: 0;
+  width: 110px;
+  height: 90px;
+  border-radius: 50% 50% 0 0;
+  background: radial-gradient(circle at 50% 40%, rgba(244, 114, 182, 0.4), rgba(76, 29, 149, 0.2));
+  border: 2px dashed rgba(255, 215, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fbcfe8;
+  font-size: 0.75rem;
+  font-family: var(--font-serif);
+}
+
+.crown-revealed-message {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.8s ease;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #fef08a;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 0 16px;
+  margin-top: 10px;
+}
+
+.crown-revealed-message.revealed {
+  max-height: 400px;
+  opacity: 1;
+  padding: 16px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 5: JUST FOR YOU (Royal Note Parchment Scroll)
+   -------------------------------------------------------------------------- */
+#page-5 {
+  background: radial-gradient(circle at 50% 30%, #fdf2f8 0%, #fce7f3 60%, #fbcfe8 100%);
+  color: #451a03;
+}
+
+.royal-scroll-card {
+  background: #fffdf5;
+  background-image: radial-gradient(#fde68a 0.75px, transparent 0.75px);
+  background-size: 15px 15px;
+  border: 4px double #d97706;
+  border-radius: 20px;
+  padding: 30px 22px;
+  box-shadow: 0 15px 40px rgba(120, 53, 15, 0.2), inset 0 0 40px rgba(254, 243, 199, 0.8);
+  width: 100%;
+  position: relative;
+  text-align: left;
+}
+
+.scroll-kitten-art {
+  width: 120px;
+  max-width: 35vw;
+  margin: -10px auto 6px auto;
+  display: block;
+}
+
+.scroll-royal-header {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #b45309;
+  border-bottom: 1.5px solid #fde68a;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.scroll-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
+  text-align: center;
+  color: #92400e;
+  margin-bottom: 14px;
+}
+
+.scroll-salutation {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #78350f;
+  margin-bottom: 12px;
+}
+
+.scroll-paragraph {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #451a03;
+  margin-bottom: 12px;
+  font-family: var(--font-serif);
+}
+
+.scroll-signature-block {
+  text-align: right;
+  margin-top: 18px;
+  font-family: var(--font-serif);
+}
+
+.scroll-closing {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #78350f;
+}
+
+.scroll-sign-name {
+  font-family: var(--font-cursive);
+  font-size: 1.9rem;
+  color: #b91c1c;
+  line-height: 1.1;
+  margin-top: 2px;
+}
+
+.seal-interactive-wrap {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.seal-stamp-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.3s ease;
+}
+
+.seal-stamp-btn:hover {
+  transform: scale(1.08);
+}
+
+.seal-stamp-btn img {
+  width: 60px;
+}
+
+.seal-hint {
+  font-size: 0.72rem;
+  color: #991b1b;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 6: ROYAL SURPRISES (Cute Cat & Royal Coupons)
+   -------------------------------------------------------------------------- */
+#page-6 {
+  background: radial-gradient(circle at 50% 30%, #fdf4ff 0%, #fae8ff 60%, #f3e8ff 100%);
+  color: var(--text-dark);
+}
+
+.page6-card {
+  background: var(--card-bg);
+  border: 2px solid #e879f9;
+  border-radius: 28px;
+  padding: 26px 18px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+}
+
+.cat-flower-art {
+  width: 135px;
+  max-width: 38vw;
+  margin: 0 auto 8px auto;
+}
+
+.page6-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  color: #86198f;
+  margin-bottom: 4px;
+}
+
+.page6-meta-ribbon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #a21caf;
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  background: #fdf4ff;
+  border-radius: 20px;
+  border: 1px dashed #f0abfc;
+}
+
+.coupons-deck {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.royal-coupon-card {
+  background: #ffffff;
+  border: 2px dashed #f472b6;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.royal-coupon-card:hover {
+  transform: translateY(-2px);
+  border-color: #db2777;
+  box-shadow: var(--shadow-md);
+}
+
+.coupon-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coupon-icon {
+  font-size: 2rem;
+}
+
+.coupon-code {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #db2777;
+  letter-spacing: 1px;
+}
+
+.coupon-title {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #701a75;
+}
+
+.coupon-desc {
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.35;
+}
+
+.coupon-claim-btn {
+  background: linear-gradient(135deg, #f43f5e, #ec4899);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.coupon-claim-btn:hover {
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 7: MY PRINCESS FOREVER & ALWAYS (Grand Ballroom Finale)
+   -------------------------------------------------------------------------- */
+#page-7 {
+  background: radial-gradient(circle at 50% 25%, #3b0764 0%, #1e0538 60%, #0d0118 100%);
+  color: var(--text-light);
+}
+
+.page7-card {
+  background: var(--card-night);
+  border: 2px solid var(--gold-primary);
+  border-radius: 28px;
+  padding: 34px 22px;
+  box-shadow: var(--shadow-gold), var(--shadow-lg);
+  width: 100%;
+}
+
+.page7-crown-art {
+  width: 180px;
+  max-width: 50vw;
+  margin: 0 auto 16px auto;
+  filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
+}
+
+.page7-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 5.2vw, 2.5rem);
+  color: var(--gold-light);
+  margin-bottom: 8px;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.page7-quote {
+  font-family: var(--font-cursive);
+  font-size: 1.8rem;
+  color: #fbcfe8;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+.page7-body {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #f5d0fe;
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+
+/* --------------------------------------------------------------------------
+   PAGE 8: SPECIAL EXTRA SURPRISE PAGE (I LOVE YOU DHANSHREE ❤️)
+   -------------------------------------------------------------------------- */
+#page-8 {
+  background: radial-gradient(circle at 50% 35%, #4a044e 0%, #2e083a 50%, #14021f 100%);
+  color: var(--text-light);
+}
+
+.page8-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(244, 114, 182, 0.6);
+  border-radius: 32px;
+  padding: 36px 22px;
+  box-shadow: 0 0 50px rgba(236, 72, 153, 0.4), var(--shadow-lg);
+  width: 100%;
+}
+
+.giant-heart-container {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.giant-heart-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.page8-main-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 6.5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: 0 0 25px rgba(244, 63, 94, 0.9), 0 0 50px rgba(236, 72, 153, 0.7);
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.page8-exact-message {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 3.8vw, 1.45rem);
+  line-height: 1.65;
+  color: #fed7aa;
+  margin-bottom: 24px;
+  font-weight: 500;
+  text-shadow: 0 0 15px rgba(253, 224, 71, 0.4);
+  max-width: 480px;
+}
+
+.page8-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.3), rgba(168, 85, 247, 0.3));
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  color: var(--gold-light);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.page8-actions-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.love-tap-counter-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(244, 114, 182, 0.4);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #fbcfe8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.love-tap-counter-wrap:hover {
+  background: rgba(244, 114, 182, 0.25);
+  transform: scale(1.05);
+}

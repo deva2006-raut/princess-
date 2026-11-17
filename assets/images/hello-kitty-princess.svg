@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="pinkGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb6d9" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff80bf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="crownGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2a1"/>
+      <stop offset="50%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#e6a100"/>
+    </linearGradient>
+    <linearGradient id="bowPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7eb3"/>
+      <stop offset="100%" stop-color="#e03177"/>
+    </linearGradient>
+    <linearGradient id="dressGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffb8d9"/>
+      <stop offset="70%" stop-color="#ff8ab9"/>
+      <stop offset="100%" stop-color="#eb5c9b"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#803360" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient background glow -->
+  <circle cx="200" cy="225" r="180" fill="url(#pinkGlow)"/>
+
+  <!-- Princess Halo / Fairy Sparkles -->
+  <g fill="#ffd700" opacity="0.8">
+    <path d="M 60 120 Q 65 130 75 130 Q 65 130 60 140 Q 55 130 45 130 Q 55 130 60 120 Z"/>
+    <path d="M 340 140 Q 345 148 353 148 Q 345 148 340 156 Q 335 148 327 148 Q 335 148 340 140 Z"/>
+    <path d="M 80 290 Q 84 296 92 296 Q 84 296 80 302 Q 76 296 68 296 Q 76 296 80 290 Z"/>
+    <path d="M 330 280 Q 335 287 344 287 Q 335 287 330 294 Q 325 287 316 287 Q 325 287 330 280 Z"/>
+    <circle cx="100" cy="180" r="3" fill="#fff"/>
+    <circle cx="310" cy="90" r="4" fill="#ffd700"/>
+    <circle cx="290" cy="230" r="2.5" fill="#fff"/>
+  </g>
+
+  <!-- Group for entire character with soft shadow -->
+  <g filter="url(#softShadow)">
+
+    <!-- Princess Dress Body -->
+    <path d="M 130 280 C 120 320 90 380 90 395 C 90 405 130 410 200 410 C 270 410 310 405 310 395 C 310 380 280 320 270 280 Z" 
+          fill="url(#dressGradient)" stroke="#2d1522" stroke-width="4.5" stroke-linejoin="round"/>
+    
+    <!-- Dress overlay frills & lace -->
+    <path d="M 115 385 C 135 375 155 390 175 385 C 195 380 215 390 235 385 C 255 380 275 390 290 385" 
+          fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 100 400 C 130 392 165 402 200 395 C 235 402 270 392 300 400" 
+          fill="none" stroke="#fff0f7" stroke-width="2.5" stroke-dasharray="4,4"/>
+
+    <!-- Puffy Princess Sleeves -->
+    <ellipse cx="120" cy="290" rx="26" ry="20" transform="rotate(-20 120 290)" fill="#ffd1e6" stroke="#2d1522" stroke-width="4"/>
+    <ellipse cx="280" cy="290" rx="26" ry="20" transform="rotate(20 280 290)" fill="#ffd1e6" stroke="#2d1522" stroke-width="4"/>
+
+    <!-- Little Paws / Hands -->
+    <ellipse cx="128" cy="315" rx="14" ry="12" fill="#ffffff" stroke="#2d1522" stroke-width="4"/>
+    <ellipse cx="272" cy="315" rx="14" ry="12" fill="#ffffff" stroke="#2d1522" stroke-width="4"/>
+
+    <!-- Princess Pearl Necklace -->
+    <g fill="#ffffff" stroke="#e09fc4" stroke-width="1.2">
+      <circle cx="160" cy="268" r="6"/>
+      <circle cx="176" cy="274" r="6"/>
+      <circle cx="200" cy="276" r="7.5"/>
+      <circle cx="224" cy="274" r="6"/>
+      <circle cx="240" cy="268" r="6"/>
+      <!-- Heart pendant -->
+      <path d="M 200 284 C 196 280 191 283 191 287 C 191 292 200 297 200 297 C 200 297 209 292 209 287 C 209 283 204 280 200 284 Z" 
+            fill="#e03177" stroke="#fff" stroke-width="1"/>
+    </g>
+
+    <!-- Hello Kitty Head Base -->
+    <path d="M 120 125 
+             C 95 105 80 85 85 70 
+             C 90 55 125 80 145 95 
+             C 175 85 225 85 255 95 
+             C 275 80 310 55 315 70 
+             C 320 85 305 105 280 125 
+             C 325 155 330 230 270 255 
+             C 230 270 170 270 130 255 
+             C 70 230 75 155 120 125 Z" 
+          fill="#ffffff" stroke="#2d1522" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- Iconic Whiskers -->
+    <!-- Left Whiskers -->
+    <path d="M 85 175 L 45 168" stroke="#2d1522" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 80 195 L 40 195" stroke="#2d1522" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 85 215 L 48 222" stroke="#2d1522" stroke-width="4" stroke-linecap="round"/>
+    <!-- Right Whiskers -->
+    <path d="M 315 175 L 355 168" stroke="#2d1522" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 320 195 L 360 195" stroke="#2d1522" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 315 215 L 352 222" stroke="#2d1522" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Eyes (Glossy Big Oval Eyes) -->
+    <ellipse cx="145" cy="188" rx="8.5" ry="12.5" fill="#2d1522"/>
+    <circle cx="143" cy="184" r="3" fill="#ffffff"/>
+    
+    <ellipse cx="255" cy="188" rx="8.5" ry="12.5" fill="#2d1522"/>
+    <circle cx="253" cy="184" r="3" fill="#ffffff"/>
+
+    <!-- Blushing Pink Cheeks -->
+    <ellipse cx="125" cy="208" rx="16" ry="9" fill="#ff9ec8" opacity="0.6"/>
+    <ellipse cx="275" cy="208" rx="16" ry="9" fill="#ff9ec8" opacity="0.6"/>
+
+    <!-- Cute Button Nose -->
+    <ellipse cx="200" cy="202" rx="7.5" ry="5.5" fill="#ffc72c" stroke="#2d1522" stroke-width="2.5"/>
+
+    <!-- Hello Kitty Iconic Bow on Left Ear -->
+    <g transform="translate(105, 82) rotate(-15)">
+      <!-- Left bow loop -->
+      <path d="M -5 0 C -35 -25 -40 15 -10 10 Z" fill="url(#bowPink)" stroke="#2d1522" stroke-width="4"/>
+      <!-- Right bow loop -->
+      <path d="M 5 0 C 35 -25 40 15 10 10 Z" fill="url(#bowPink)" stroke="#2d1522" stroke-width="4"/>
+      <!-- Bow Center Knot with Gem -->
+      <circle cx="0" cy="5" r="11" fill="url(#bowPink)" stroke="#2d1522" stroke-width="4"/>
+      <circle cx="0" cy="5" r="4.5" fill="#fff" opacity="0.8"/>
+    </g>
+
+    <!-- Royal Princess Golden Tiara / Crown (Center of Head) -->
+    <g transform="translate(200, 72)">
+      <!-- Crown Base Arc -->
+      <path d="M -48 10 Q 0 4 48 10 Q 0 15 -48 10 Z" fill="url(#crownGold)" stroke="#2d1522" stroke-width="3"/>
+      <!-- Crown Peaks -->
+      <path d="M -44 10 
+               L -40 -12 
+               L -24 -2 
+               L 0 -30 
+               L 24 -2 
+               L 40 -12 
+               L 44 10 Z" 
+            fill="url(#crownGold)" stroke="#2d1522" stroke-width="3.5" stroke-linejoin="round"/>
+      
+      <!-- Center Red Heart Ruby -->
+      <path d="M 0 -12 C -4 -16 -10 -13 -10 -8 C -10 -2 0 5 0 5 C 0 5 10 -2 10 -8 C 10 -13 4 -16 0 -12 Z" 
+            fill="#e0245e" stroke="#2d1522" stroke-width="1.5"/>
+      <circle cx="-2" cy="-9" r="1.5" fill="#fff"/>
+
+      <!-- Small Side Gems -->
+      <circle cx="-40" cy="-14" r="3.5" fill="#38d9a9" stroke="#2d1522" stroke-width="1.2"/>
+      <circle cx="40" cy="-14" r="3.5" fill="#38d9a9" stroke="#2d1522" stroke-width="1.2"/>
+      <circle cx="0" cy="-33" r="5" fill="#ffd700" stroke="#2d1522" stroke-width="2"/>
+      <circle cx="0" cy="-33" r="2.5" fill="#fff"/>
+      
+      <!-- Sparkle cross on crown tip -->
+      <path d="M 0 -45 L 0 -38 M -3.5 -41.5 L 3.5 -41.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+  </g>
+</svg>

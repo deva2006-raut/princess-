@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 280" width="100%" height="100%">
+  <defs>
+    <radialGradient id="lanternGlow" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#fffbeb" stop-opacity="1"/>
+      <stop offset="30%" stop-color="#fef08a" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ironGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="30%" stop-color="#94a3b8"/>
+      <stop offset="70%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="brassGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="50%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="lightBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Hanging Chain -->
+  <line x1="80" y1="0" x2="80" y2="40" stroke="#fde047" stroke-width="3" stroke-dasharray="4,4"/>
+  <circle cx="80" cy="42" r="7" fill="none" stroke="url(#brassGradient)" stroke-width="3"/>
+
+  <!-- Lantern Roof Dome -->
+  <path d="M 80 48 C 65 52 50 65 35 75 L 125 75 C 110 65 95 52 80 48 Z" 
+        fill="url(#brassGradient)" stroke="#451a03" stroke-width="2.5"/>
+  <rect x="30" y="75" width="100" height="12" rx="3" fill="url(#brassGradient)" stroke="#451a03" stroke-width="2"/>
+
+  <!-- Glowing Light Core (Behind Glass) -->
+  <circle cx="80" cy="140" r="55" fill="url(#lanternGlow)" filter="url(#lightBloom)"/>
+
+  <!-- Glass Chamber Body -->
+  <path d="M 38 87 L 48 190 L 112 190 L 122 87 Z" 
+        fill="rgba(254, 240, 138, 0.25)" stroke="#451a03" stroke-width="3"/>
+
+  <!-- Internal Candle & Flame -->
+  <rect x="74" y="145" width="12" height="35" rx="3" fill="#fffbeb" stroke="#fef08a" stroke-width="1.5"/>
+  <path d="M 80 145 C 75 137 77 127 80 120 C 83 127 85 137 80 145 Z" fill="#f59e0b"/>
+  <circle cx="80" cy="138" r="4" fill="#ffffff"/>
+
+  <!-- Metal Glass Window Panes & Filigree -->
+  <line x1="80" y1="87" x2="80" y2="190" stroke="url(#brassGradient)" stroke-width="2.5"/>
+  <line x1="59" y1="87" x2="64" y2="190" stroke="url(#brassGradient)" stroke-width="2"/>
+  <line x1="101" y1="87" x2="96" y2="190" stroke="url(#brassGradient)" stroke-width="2"/>
+
+  <!-- Lantern Base -->
+  <rect x="42" y="190" width="76" height="12" rx="3" fill="url(#brassGradient)" stroke="#451a03" stroke-width="2.5"/>
+  <path d="M 50 202 L 60 215 L 100 215 L 110 202 Z" fill="url(#brassGradient)" stroke="#451a03" stroke-width="2"/>
+  <circle cx="80" cy="220" r="5" fill="url(#brassGradient)" stroke="#451a03" stroke-width="2"/>
+
+  <!-- Floating Sparkles / Fairy Fireflies below lantern -->
+  <circle cx="65" cy="235" r="3" fill="#fef08a" opacity="0.8"/>
+  <circle cx="95" cy="245" r="2.5" fill="#fef08a" opacity="0.7"/>
+  <circle cx="80" cy="260" r="3.5" fill="#fde047" opacity="0.9"/>
+</svg>

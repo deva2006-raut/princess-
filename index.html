@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Happy Princess Day, Dhanshree ❤️ | A Royal Celebration</title>
+  <meta name="description" content="A magical, romantic Princess Day interactive surprise website dedicated to Dhanshree.">
+  <meta name="theme-color" content="#1a0826">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+
+  <!-- Google Fonts: Luxury Serif, Romantic Cursive, & Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Official YouTube IFrame Player API for licensed playback -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=5.0">
+  <link rel="stylesheet" href="css/animations.css?v=5.0">
+  <link rel="stylesheet" href="css/pages.css?v=5.0">
+</head>
+<body>
+
+  <!-- Hidden Audio IFrame Container (Zero-culling 200x200 container) -->
+  <div id="ytAudioContainer" class="youtube-audio-host"></div>
+
+  <!-- HTML5 Native Persistent Audio Element for 100% Reliable Background Music -->
+  <audio id="princessNativeAudio" preload="auto" loop playsinline>
+    <source src="assets/music/dil-kaa-jo-haal-hai.mp3" type="audio/mpeg">
+    <source src="assets/music/dil-kaa-jo-haal-hai.m4a" type="audio/mp4">
+  </audio>
+
+  <!-- Background Ambient Canvas for Floating Petals, Stardust & Heart Bursts -->
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- Vignette Lighting Overlay -->
+  <div class="vignette-overlay"></div>
+
+  <!-- Persistent Header Bar with Brand & Background Music Controls -->
+  <header class="persistent-header" id="mainHeader">
+    <div class="brand-badge">
+      <span class="brand-crown">👑</span>
+      <span class="brand-title">Princess Day</span>
+    </div>
+
+    <!-- Audio Player Controls (Persistent across all 8 pages) -->
+    <div class="header-audio-controls">
+      <div class="audio-track-info">
+        <span class="audio-track-name" id="audioTrackTitle">Dil Kaa Jo Haal Hai</span>
+        <span class="audio-singer-name" id="audioSingerTitle">Abhijeet Bhattacharya & Shreya Ghoshal (Besharam)</span>
+      </div>
+
+      <!-- Animated Equalizer Bars -->
+      <div class="audio-visualizer" id="audioVisualizer" title="Soundtrack Visualizer">
+        <span class="eq-bar"></span>
+        <span class="eq-bar"></span>
+        <span class="eq-bar"></span>
+        <span class="eq-bar"></span>
+      </div>
+
+      <!-- Play/Pause Toggle -->
+      <button class="ctrl-btn" id="audioPlayToggle" title="Play / Pause Soundtrack" aria-label="Toggle Audio Playback">
+        <svg id="playIconSvg" viewBox="0 0 24 24">
+          <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86a1 1 0 0 0-1.5.86z"/>
+        </svg>
+        <svg id="pauseIconSvg" viewBox="0 0 24 24" style="display:none;">
+          <path d="M6 5h4v14H6zm8 0h4v14h-4z"/>
+        </svg>
+      </button>
+
+      <!-- Mute/Unmute Toggle -->
+      <button class="ctrl-btn" id="audioMuteToggle" title="Mute / Unmute" aria-label="Toggle Audio Mute">
+        <svg id="volumeIconSvg" viewBox="0 0 24 24">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+        <svg id="muteIconSvg" viewBox="0 0 24 24" style="display:none;">
+          <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Viewport Container -->
+  <main class="app-container">
+
+    <!-- ======================================================================
+         PAGE 1: IT'S PRINCESS DAY (Opening Night Garden & Scannable QR Code)
+         ====================================================================== -->
+    <section class="princess-page active" id="page-1">
+      <!-- Hanging Glowing Fairytale Garden Lanterns -->
+      <div class="garden-night-sky">
+        <div class="lantern-left floating-lantern-left">
+          <img src="assets/images/lantern.svg" alt="Glowing Night Garden Lantern">
+        </div>
+        <div class="lantern-right floating-lantern-right">
+          <img src="assets/images/lantern.svg" alt="Glowing Night Garden Lantern">
+        </div>
+      </div>
+
+      <div class="page-inner-content">
+        <!-- Glowing Crescent Moon -->
+        <div class="garden-moon floating-moon">
+          <img src="assets/images/moon-stars.svg" alt="Magical Night Crescent Moon and Stars">
+        </div>
+
+        <span class="page1-header-tag">A Magical Royal Celebration</span>
+        <h1 class="page1-main-title">IT'S PRINCESS DAY</h1>
+        <div class="page1-princess-name">Dedicated to My Sweetheart Dhanshree ❤️</div>
+        <p class="page1-subtitle">A special magical surprise waiting just for you ✨</p>
+
+        <!-- Grand Glowing ENTER Button (Direct Centered, No Scanner) -->
+        <button class="btn-royal-primary enter-main-btn" id="enterGardenBtn">
+          <span>TAP TO ENTER SURPRISE</span>
+          <span>👑</span>
+        </button>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         PAGE 2: HAPPY PRINCESS DAY (Pastel Pink Hello Kitty Princess Card)
+         ====================================================================== -->
+    <section class="princess-page" id="page-2">
+      <div class="page-inner-content">
+        <div class="page2-card">
+          <!-- Hello Kitty Royal Princess Illustration -->
+          <div class="hk-illustration-wrap">
+            <img src="assets/images/hello-kitty-princess.svg" alt="Royal Hello Kitty Princess with Crown and Gown">
+          </div>
+
+          <h2 class="page2-title">HAPPY PRINCESS DAY</h2>
+          <div class="page2-sweetheart-tag">To My Sweetheart 💕</div>
+
+          <p class="page2-body-text">
+            To the most graceful, thoughtful, and wonderful girl who brings endless light, comfort, and pure joy into my life.
+            Today and every day, you deserve to be treated like the absolute royalty you are.
+          </p>
+
+          <div class="page2-badge">
+            <span>🌸</span>
+            <span>Royal Princess Edition • Hello Kitty Approved</span>
+          </div>
+
+          <!-- Direct Next Action Button -->
+          <div class="card-action-wrap">
+            <button class="btn-royal-primary card-next-btn" data-action="next">
+              <span>See Your Gifts 🎁</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         PAGE 3: GIFTS FOR MY PRINCESS (Greeting Card & Interactive Gift Boxes)
+         ====================================================================== -->
+    <section class="princess-page" id="page-3">
+      <div class="page-inner-content">
+        <div class="page3-card">
+          <!-- Cute Gifts Illustration -->
+          <div class="page3-header-art">
+            <img src="assets/images/gifts-illustration.svg" alt="Stacked Royal Gift Boxes with Satin Ribbons">
+          </div>
+
+          <h2 class="page3-title">GIFTS FOR MY PRINCESS</h2>
+          <p class="page3-subtitle">“Only the sweetest treasures for someone as special as you…”</p>
+
+          <!-- 4 Interactive Unwrapping Gift Boxes -->
+          <div class="gifts-grid">
+            <!-- Gift 1 -->
+            <div class="gift-interactive-card" role="button" tabindex="0">
+              <span class="gift-card-icon">🍫</span>
+              <h3 class="gift-card-title">Sweet Delights</h3>
+              <p class="gift-card-desc">A lifetime supply of your favorite chocolates, warm comforting cuddles, and sweet surprises.</p>
+              <span class="gift-card-tap-cue">Tap to unwrap 🎁</span>
+            </div>
+
+            <!-- Gift 2 -->
+            <div class="gift-interactive-card" role="button" tabindex="0">
+              <span class="gift-card-icon">🌸</span>
+              <h3 class="gift-card-title">Infinite Pampering</h3>
+              <p class="gift-card-desc">Always listening to your thoughts, standing by you, and making sure your smile never fades.</p>
+              <span class="gift-card-tap-cue">Tap to unwrap 🎁</span>
+            </div>
+
+            <!-- Gift 3 -->
+            <div class="gift-interactive-card" role="button" tabindex="0">
+              <span class="gift-card-icon">🌟</span>
+              <h3 class="gift-card-title">Warmest Safe Haven</h3>
+              <p class="gift-card-desc">A gentle hand to hold whenever you feel tired, and a shoulder always ready to rest upon.</p>
+              <span class="gift-card-tap-cue">Tap to unwrap 🎁</span>
+            </div>
+
+            <!-- Gift 4 -->
+            <div class="gift-interactive-card" role="button" tabindex="0">
+              <span class="gift-card-icon">💖</span>
+              <h3 class="gift-card-title">Pure Devotion</h3>
+              <p class="gift-card-desc">My whole heart, completely loyal, patient, and dedicated to you through every chapter of life.</p>
+              <span class="gift-card-tap-cue">Tap to unwrap 🎁</span>
+            </div>
+          </div>
+
+          <!-- Direct Next Action Button -->
+          <div class="card-action-wrap">
+            <button class="btn-royal-primary card-next-btn" data-action="next">
+              <span>Next: The Missing Crown 👑</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         PAGE 4: THE MISSING CROWN (Interactive Crown Placement Ceremony)
+         ====================================================================== -->
+    <section class="princess-page" id="page-4">
+      <div class="page-inner-content">
+        <div class="page4-card">
+          <h2 class="page4-title">THE MISSING CROWN</h2>
+          <p class="page4-subtitle">A royal mystery that only one person can solve...</p>
+
+          <!-- Crown Stage with Movable Tiara -->
+          <div class="crown-stage-wrapper" id="crownStageWrapper">
+            <div class="movable-crown crown-movable" id="movableCrown">
+              <img src="assets/images/royal-crown.svg" alt="Majestic Golden Princess Crown with Heart Ruby">
+            </div>
+
+            <div class="princess-silhouette-mirror">
+              <span>Your Throne</span>
+            </div>
+          </div>
+
+          <!-- Interactive Action Button -->
+          <button class="btn-royal-primary" id="placeCrownBtn" style="margin-bottom: 12px;">
+            <span>Place The Crown Where It Belongs ✨</span>
+          </button>
+
+          <!-- Heartfelt Revelation Message -->
+          <div class="crown-revealed-message" id="crownRevealedMessage">
+            <p>
+              “They searched high in the skies and across every kingdom for the missing crown, not realizing you were wearing it all along.
+              You never needed gold or diamonds to be royalty — your kindness, gentle soul, and radiant smile are your eternal crown.” 👑✨
+            </p>
+          </div>
+
+          <!-- Direct Next Action Button -->
+          <div class="card-action-wrap" style="margin-top: 14px;">
+            <button class="btn-royal-primary card-next-btn" data-action="next">
+              <span>Next: A Royal Note For You 💌</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         PAGE 5: JUST FOR YOU (Royal Note Parchment Scroll & Letter)
+         ====================================================================== -->
+    <section class="princess-page" id="page-5">
+      <div class="page-inner-content">
+        <div class="royal-scroll-card" id="royalScrollCard">
+          <!-- Kitten with Feather Quill Art -->
+          <div class="scroll-kitten-art">
+            <img src="assets/images/royal-scroll.svg" alt="Cute Kitten with Feather Quill and Royal Wax Seal">
+          </div>
+
+          <div class="scroll-royal-header">
+            ✦ ROYAL NOTE • SEALED WITH LOVE ✦
+          </div>
+
+          <h2 class="scroll-title">JUST FOR YOU</h2>
+
+          <div class="scroll-letter-fold">
+            <div class="scroll-salutation">Dearest Dhanshree,</div>
+
+            <p class="scroll-paragraph">
+              If I had a single wish for every time you brought a genuine smile to my face, I would be holding the entire cosmos in my hands tonight.
+            </p>
+
+            <p class="scroll-paragraph">
+              In a world that can often be loud and rushed, your presence brings peace, warmth, and steady joy. You have this rare, magical way of making ordinary moments feel like beautiful pages from a fairy tale.
+            </p>
+
+            <p class="scroll-paragraph">
+              Thank you for being so thoughtful, so sweet, and so wonderfully you. Celebrating you today is my greatest delight.
+            </p>
+
+            <div class="scroll-signature-block">
+              <div class="scroll-closing">Forever & Always With All My Heart,</div>
+              <div class="scroll-sign-name">From Your Prince ❤️</div>
+            </div>
+          </div>
+
+          <!-- Wax Seal Stamp Action -->
+          <div class="seal-interactive-wrap">
+            <button class="seal-stamp-btn" id="waxSealStamp" title="Tap to Toggle Royal Wax Seal">
+              <span class="seal-hint">Tap Wax Seal To Unfold 💌</span>
+            </button>
+          </div>
+
+          <!-- Direct Next Action Button -->
+          <div class="card-action-wrap" style="text-align: center; margin-top: 14px;">
+            <button class="btn-royal-primary card-next-btn" data-action="next">
+              <span>Next: Royal Surprises 🎀</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         PAGE 6: ROYAL SURPRISES (Cute Cat & Claimable Royal Coupons)
+         ====================================================================== -->
+    <section class="princess-page" id="page-6">
+      <div class="page-inner-content">
+        <div class="page6-card">
+          <!-- Cute Cat Holding a Rose Flower -->
+          <div class="cat-flower-art">
+            <img src="assets/images/cute-cat-flower.svg" alt="Cute Kitten Holding a Red Rose Flower">
+          </div>
+
+          <h2 class="page6-title">ROYAL SURPRISES</h2>
+
+          <div class="page6-meta-ribbon">
+            <span>From: Your Prince 🤴</span>
+            <span>•</span>
+            <span>To: Sweetheart Dhanshree 👸</span>
+            <span>•</span>
+            <span>November 18</span>
+          </div>
+
+          <!-- Claimable Royal Coupons -->
+          <div class="coupons-deck">
+            <!-- Coupon 1 -->
+            <div class="royal-coupon-card">
+              <span class="claimed-stamp">Approved ✓</span>
+              <div class="coupon-left">
+                <span class="coupon-icon">🤗</span>
+                <div>
+                  <div class="coupon-code">VOUCHER #001</div>
+                  <div class="coupon-title">100 Warmest Tight Hugs</div>
+                  <div class="coupon-desc">Redeemable anytime you need warmth or reassurance. Never expires.</div>
+                </div>
+              </div>
+              <button class="coupon-claim-btn">Claim Coupon</button>
+            </div>
+
+            <!-- Coupon 2 -->
+            <div class="royal-coupon-card">
+              <span class="claimed-stamp">Approved ✓</span>
+              <div class="coupon-left">
+                <span class="coupon-icon">🌹</span>
+                <div>
+                  <div class="coupon-code">VOUCHER #002</div>
+                  <div class="coupon-title">Dream Dinner & Long Drive</div>
+                  <div class="coupon-desc">A romantic evening at any place of your choice under the stars.</div>
+                </div>
+              </div>
+              <button class="coupon-claim-btn">Claim Coupon</button>
+            </div>
+
+            <!-- Coupon 3 -->
+            <div class="royal-coupon-card">
+              <span class="claimed-stamp">Approved ✓</span>
+              <div class="coupon-left">
+                <span class="coupon-icon">🍨</span>
+                <div>
+                  <div class="coupon-code">VOUCHER #003</div>
+                  <div class="coupon-title">Sweet Treats Delivery</div>
+                  <div class="coupon-desc">Instant ice cream, desserts, or snacks to brighten any mood.</div>
+                </div>
+              </div>
+              <button class="coupon-claim-btn">Claim Coupon</button>
+            </div>
+
+            <!-- Coupon 4 -->
+            <div class="royal-coupon-card">
+              <span class="claimed-stamp">Approved ✓</span>
+              <div class="coupon-left">
+                <span class="coupon-icon">👑</span>
+                <div>
+                  <div class="coupon-code">VOUCHER #004</div>
+                  <div class="coupon-title">Princess Rules The Day</div>
+                  <div class="coupon-desc">You make 100% of all decisions, choices, and plans. Your word is law!</div>
+                </div>
+              </div>
+              <button class="coupon-claim-btn">Claim Coupon</button>
+            </div>
+          </div>
+
+          <!-- Direct Next Action Button -->
+          <div class="card-action-wrap">
+            <button class="btn-royal-primary card-next-btn" data-action="next">
+              <span>Next: My Princess Forever 💍</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         PAGE 7: MY PRINCESS FOREVER & ALWAYS (Grand Ballroom Finale)
+         ====================================================================== -->
+    <section class="princess-page" id="page-7">
+      <div class="page-inner-content">
+        <div class="page7-card">
+          <!-- Royal Crown & Intertwined Hearts Art -->
+          <div class="page7-crown-art">
+            <img src="assets/images/royal-crown.svg" alt="Royal Golden Crown with Ruby and Diamond Glints">
+          </div>
+
+          <h2 class="page7-title">MY PRINCESS FOREVER & ALWAYS</h2>
+
+          <div class="page7-quote">
+            “Every love story is beautiful, but ours is my favorite fairy tale.”
+          </div>
+
+          <p class="page7-body">
+            No matter where the journey of life leads us, through every high, every low, and every season under the sun, you will always remain my cherished princess.
+            Thank you for being the sweetest part of my days.
+          </p>
+
+          <!-- Call to action button to unlock Page 8 -->
+          <button class="btn-royal-primary" data-action="next">
+            <span>One Final Secret Message For You...</span>
+            <span>💌</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================================================================
+         PAGE 8: SPECIAL EXTRA PAGE (I LOVE YOU DHANSHREE ❤️)
+         ====================================================================== -->
+    <section class="princess-page" id="page-8">
+      <div class="page-inner-content">
+        <div class="page8-card">
+          <!-- Large Animated Pulsating 3D Jewel Heart -->
+          <div class="giant-heart-container">
+            <div class="giant-heart-glow" id="giantAnimatedHeart" title="Tap to Send Love to Dhanshree!">
+              <svg class="giant-heart-svg" viewBox="0 0 100 90">
+                <defs>
+                  <radialGradient id="heartRuby" cx="35%" cy="35%" r="65%">
+                    <stop offset="0%" stop-color="#ff7b92"/>
+                    <stop offset="35%" stop-color="#e11d48"/>
+                    <stop offset="70%" stop-color="#be123c"/>
+                    <stop offset="100%" stop-color="#881337"/>
+                  </radialGradient>
+                  <linearGradient id="heartGoldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fff8db"/>
+                    <stop offset="50%" stop-color="#ffd700"/>
+                    <stop offset="100%" stop-color="#d97706"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 50 15 
+                         C 50 15 35 -5 18 2 
+                         C 2 8 -2 28 8 46 
+                         C 18 64 50 86 50 86 
+                         C 50 86 82 64 92 46 
+                         C 102 28 98 8 82 2 
+                         C 65 -5 50 15 50 15 Z" 
+                      fill="url(#heartRuby)" stroke="url(#heartGoldRim)" stroke-width="2.5"/>
+                <!-- Diamond Gleam -->
+                <ellipse cx="32" cy="22" rx="7" ry="12" fill="#ffffff" opacity="0.45" transform="rotate(-30 32 22)"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Main Heading: Exact User Specification -->
+          <h1 class="page8-main-heading">I LOVE YOU DHANSHREE ❤️</h1>
+
+          <!-- Exact User Specified Message -->
+          <p class="page8-exact-message">
+            “You are my favourite person, today, tomorrow and forever. You make my world more beautiful. ❤️”
+          </p>
+
+          <div class="page8-badge">
+            Happy Princess Day 2026, My Dhanshree 🌸
+          </div>
+
+          <div class="page8-actions-group">
+            <!-- Interactive Love Reaction Counter -->
+            <button class="love-tap-counter-wrap" id="loveTapBtn">
+              <span>Send Extra Love 💕</span>
+              <span id="loveTapCount">0</span>
+            </button>
+
+            <!-- Replay Button (Returns to Page 1 smoothly without stopping music) -->
+            <button class="btn-royal-primary" id="replayBtn">
+              <span>REPLAY SURPRISE</span>
+              <span>↺</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Persistent Bottom Navigation Bar -->
+  <footer class="persistent-footer" id="mainFooter">
+    <div class="page-indicator-badge">
+      <span>Page</span>
+      <span class="num" id="currentIndicator">1</span>
+      <span>of 8</span>
+    </div>
+
+    <div class="footer-nav-buttons">
+      <!-- Back Button (hidden on page 1 via app.js logic or css) -->
+      <button class="nav-pill-btn" data-action="prev" id="globalPrevBtn" title="Previous Page">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+        <span>Back</span>
+      </button>
+
+      <!-- Next Button -->
+      <button class="nav-pill-btn" data-action="next" id="globalNextBtn" title="Next Page">
+        <span>Next</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js?v=5.0"></script>
+  <script src="js/particles.js?v=5.0"></script>
+  <script src="js/audio-player.js?v=5.0"></script>
+  <script src="js/app.js?v=5.0"></script>
+</body>
+</html>

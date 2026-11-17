@@ -1,0 +1,242 @@
+/* ==========================================================================
+   PRINCESS DAY - ANIMATIONS & TRANSITIONS
+   ========================================================================== */
+
+/* Page Transitions */
+.slide-in-right {
+  animation: pageSlideInRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.slide-out-left {
+  animation: pageSlideOutLeft 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.slide-in-left {
+  animation: pageSlideInLeft 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.slide-out-right {
+  animation: pageSlideOutRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fade-in {
+  animation: pageFadeIn 0.6s ease forwards;
+}
+
+.fade-out {
+  animation: pageFadeOut 0.6s ease forwards;
+}
+
+@keyframes pageSlideInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes pageSlideOutLeft {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0) scale(0.97);
+  }
+}
+
+@keyframes pageSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes pageSlideOutRight {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0) scale(0.97);
+  }
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pageFadeOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.96); }
+}
+
+/* Floating Lanterns Sway Animation */
+.floating-lantern-left {
+  animation: lanternSwayLeft 4.5s ease-in-out infinite alternate;
+  transform-origin: 50% 0%;
+}
+
+.floating-lantern-right {
+  animation: lanternSwayRight 5.2s ease-in-out infinite alternate;
+  transform-origin: 50% 0%;
+}
+
+@keyframes lanternSwayLeft {
+  0% { transform: rotate(-4deg) translateY(0); }
+  50% { transform: rotate(3deg) translateY(-8px); }
+  100% { transform: rotate(-5deg) translateY(-3px); }
+}
+
+@keyframes lanternSwayRight {
+  0% { transform: rotate(5deg) translateY(-4px); }
+  50% { transform: rotate(-3deg) translateY(-10px); }
+  100% { transform: rotate(4deg) translateY(0); }
+}
+
+/* Floating Moon Gentle Levitation */
+.floating-moon {
+  animation: moonFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes moonFloat {
+  0% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 20px rgba(254, 240, 138, 0.4)); }
+  100% { transform: translateY(-12px) scale(1.03); filter: drop-shadow(0 0 35px rgba(254, 240, 138, 0.7)); }
+}
+
+/* Pulsating Heart for Page 8 */
+.giant-heart-glow {
+  animation: romanticHeartbeat 1.6s ease-in-out infinite;
+  transform-origin: center center;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.giant-heart-glow:hover {
+  transform: scale(1.08);
+}
+
+.giant-heart-glow.pump {
+  animation: instantHeartPump 0.4s ease-out;
+}
+
+@keyframes romanticHeartbeat {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(244, 63, 94, 0.6));
+  }
+  14% {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 30px rgba(244, 63, 94, 0.85));
+  }
+  28% {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 20px rgba(244, 63, 94, 0.7));
+  }
+  42% {
+    transform: scale(1.16);
+    filter: drop-shadow(0 0 38px rgba(244, 63, 94, 0.95));
+  }
+  70% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(244, 63, 94, 0.6));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(244, 63, 94, 0.6));
+  }
+}
+
+@keyframes instantHeartPump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.35) rotate(-4deg); filter: drop-shadow(0 0 50px rgba(255, 105, 180, 1)); }
+  100% { transform: scale(1.12); }
+}
+
+/* Shimmer Light Sweep on Gold */
+@keyframes shineSweep {
+  0% { transform: translateX(-150%) rotate(30deg); }
+  25% { transform: translateX(150%) rotate(30deg); }
+  100% { transform: translateX(150%) rotate(30deg); }
+}
+
+/* Equalizer Bars Animations */
+@keyframes soundBar1 { 0% { height: 4px; } 100% { height: 16px; } }
+@keyframes soundBar2 { 0% { height: 7px; } 100% { height: 18px; } }
+@keyframes soundBar3 { 0% { height: 3px; } 100% { height: 14px; } }
+@keyframes soundBar4 { 0% { height: 6px; } 100% { height: 17px; } }
+
+/* Crown Placement Floating Animation */
+.crown-movable {
+  transition: all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.crowned .crown-movable {
+  transform: translateY(72px) scale(0.92);
+  filter: drop-shadow(0 0 35px #ffd700);
+}
+
+/* Approved Stamp Animation for Royal Coupons */
+@keyframes stampSlam {
+  0% {
+    opacity: 0;
+    transform: scale(3) rotate(-25deg);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(0.85) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-12deg);
+  }
+}
+
+.claimed-stamp {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 3px dashed #e11d48;
+  color: #e11d48;
+  padding: 4px 10px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.claimed .claimed-stamp {
+  display: block;
+  animation: stampSlam 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Wax Seal Cracking / Unsealing */
+.royal-scroll-wrapper {
+  transition: all 0.6s ease;
+}
+
+.unsealed .seal-stamp-btn {
+  transform: scale(0.85) translateY(8px);
+  filter: grayscale(0.5);
+  opacity: 0.7;
+}
+
+.unsealed .scroll-letter-fold {
+  max-height: 1200px;
+  opacity: 1;
+  padding-top: 20px;
+}
